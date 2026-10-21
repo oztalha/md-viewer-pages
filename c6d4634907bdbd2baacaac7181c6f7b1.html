@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Protected page</title>
+<style>
+:root { color-scheme: light dark; --bg: #fff; --fg: #1d1d1f; --muted: #6e6e73; --line: #d2d2d7; --accent: #0a66d8; }
+@media (prefers-color-scheme: dark) { :root { --bg: #1e1e20; --fg: #f5f5f7; --muted: #a1a1a6; --line: #3a3a3c; --accent: #4c9bff; } }
+html, body { height: 100%; margin: 0; background: var(--bg); color: var(--fg); font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+body { display: grid; place-items: center; padding: 16px; box-sizing: border-box; }
+form { width: min(360px, 100%); display: grid; gap: 10px; }
+form[hidden] { display: none; }
+h1 { margin: 0; font-size: 19px; }
+p { margin: 0; color: var(--muted); font-size: 13.5px; }
+input, button { font: inherit; padding: 9px 12px; border-radius: 9px; border: 1px solid var(--line); background: transparent; color: var(--fg); }
+button { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; cursor: pointer; }
+button:disabled { opacity: .6; cursor: default; }
+label { display: flex; gap: 8px; align-items: center; color: var(--muted); font-size: 13.5px; }
+label input { padding: 0; }
+#e { color: #d93025; min-height: 1.5em; }
+</style>
+</head>
+<body>
+<form id="f" hidden>
+<h1>Protected page</h1>
+<p>Enter the password you were given to read this page.</p>
+<input id="p" type="password" autocomplete="current-password" required aria-label="Password">
+<label><input id="r" type="checkbox" checked> Remember on this device</label>
+<button id="b">Open</button>
+<p id="e" role="alert"></p>
+</form>
+<script type="application/json" id="d">{"v":1,"iter":600000,"salt":"PLtpciQLGXiSX0s6NtWfaQ==","iv":"QDWiOm5CUTSlxmQh","ct":"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"}</script>
+<script>
+const decryptPayload = async function SJ(t,e,n){const i=o=>Uint8Array.from(atob(o),c=>c.charCodeAt(0)),r=n?await crypto.subtle.importKey("raw",i(n),"AES-GCM",!0,["decrypt"]):await crypto.subtle.deriveKey({name:"PBKDF2",hash:"SHA-256",salt:i(t.salt),iterations:t.iter},await crypto.subtle.importKey("raw",new TextEncoder().encode(e),"PBKDF2",!1,["deriveKey"]),{name:"AES-GCM",length:256},!0,["decrypt"]),s=await crypto.subtle.decrypt({name:"AES-GCM",iv:i(t.iv)},r,i(t.ct));let l="";for(const o of new Uint8Array(await crypto.subtle.exportKey("raw",r)))l+=String.fromCharCode(o);return{html:new TextDecoder().decode(s),key:btoa(l)}};
+const payload = JSON.parse(document.getElementById("d").textContent);
+const storageKey = "md-viewer-page:" + location.pathname;
+const form = document.getElementById("f");
+const show = async (html) => {
+  // Replacing the page only works once it has finished loading; a remembered
+  // key can decrypt before that.
+  if (document.readyState === "loading") {
+    await new Promise((resolve) => document.addEventListener("DOMContentLoaded", resolve, { once: true }));
+  }
+  document.open();
+  document.write(html);
+  document.close();
+};
+const store = (fn) => {
+  try {
+    return fn(localStorage);
+  } catch {
+    return null; // storage blocked (private mode, settings): just ask each time
+  }
+};
+(async () => {
+  // A key remembered on this device opens the page straight away; a new
+  // password (or a broken entry) fails here and falls back to the prompt.
+  const saved = store((s) => s.getItem(storageKey));
+  if (saved) {
+    try {
+      return await show((await decryptPayload(payload, "", saved)).html);
+    } catch {
+      store((s) => s.removeItem(storageKey));
+    }
+  }
+  form.hidden = false;
+  document.getElementById("p").focus();
+})();
+form.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  const button = document.getElementById("b");
+  const error = document.getElementById("e");
+  button.disabled = true;
+  error.textContent = "";
+  try {
+    const result = await decryptPayload(payload, document.getElementById("p").value);
+    if (document.getElementById("r").checked) store((s) => s.setItem(storageKey, result.key));
+    else store((s) => s.removeItem(storageKey));
+    await show(result.html);
+  } catch {
+    error.textContent = "That password didn't work.";
+    button.disabled = false;
+  }
+});
+</script>
+</body>
+</html>
